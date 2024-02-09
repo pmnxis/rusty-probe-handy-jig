@@ -17,3 +17,10 @@ _autosave-*
 # Folders
 gerbers
 rs-probe-backups
+
+# Added for modification
+production/rs-probe_*-*-*_*-*-*
+production/rs-probe-handy-jig_*-*-*_*-*-*
+\#auto_saved_files#
+*.lck
+.DS_Store

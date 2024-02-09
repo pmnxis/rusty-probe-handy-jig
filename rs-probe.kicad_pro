@@ -35,8 +35,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 6.2,
-          "width": 6.2
+          "height": 1.1,
+          "width": 1.2
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -56,13 +56,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "footprint_type_mismatch|148500000|92000000|00000000-0000-0000-0000-00005f10abfb|00000000-0000-0000-0000-000000000000",
-        "footprint_type_mismatch|179000000|79000000|00000000-0000-0000-0000-00005f10d3b1|00000000-0000-0000-0000-000000000000",
-        "footprint_type_mismatch|182000000|93000000|00000000-0000-0000-0000-00005f10ea7f|00000000-0000-0000-0000-000000000000",
-        "items_not_allowed|152400000|80800000|e8740d46-3138-4171-aa9b-2a40056a49ee|00000000-0000-0000-0000-000000000000",
-        "lib_footprint_mismatch|172500000|81000000|e7d3cdad-117c-4b04-8f8b-e3b2bc618357|00000000-0000-0000-0000-000000000000"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -138,7 +132,7 @@
         "min_track_width": 0.09999999999999999,
         "min_via_annular_width": 0.049999999999999996,
         "min_via_diameter": 0.39999999999999997,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -182,7 +176,8 @@
         }
       ],
       "track_widths": [
-        0.0
+        0.0,
+        0.2
       ],
       "via_dimensions": [
         {

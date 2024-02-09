@@ -3,6 +3,10 @@
 This is an open hardware probe for the Serial Wire Debug (SWD) and JTAG protocol.
 Based on the RP2040 MCU.
 
+![modified probe](rs-probe-mod.png)
+Following image is forked and modified PCB 3D rendering.
+This repo is modified PCB data details are descirbed in [here](#modification-on-this-forked-repo)
+
 ## Firmware
 
 The firmware is available [here](https://github.com/probe-rs/rusty-probe-firmware) and is open-source.
@@ -38,8 +42,25 @@ Here is a small comparison with a few different probes:
 
 ## Where to buy
 
-The probe is available in the [probe-rs shop](https://shop.probe.rs/). But you are free to build one yourself as well!
+The original probe is available in the [probe-rs shop](https://shop.probe.rs/). But you are free to build one yourself as well!
 
 ## License
 
 This work is licensed under [CERN-OHL-P](cern_ohl_p_v2.txt).
+
+# Modification on this forked repo
+![modified probe](rs-probe-mod.png)
+The existing rusty-probe has been modified for a practical experiment aiming to enable on-site, real-time firmware updates by individuals without programming knowledge. This modification incorporates BillMock-HW to facilitate firmware updates without the need for a computer.
+
+## Changed Note
+- Default `W25Q8` is replaced to `IS25WP016D` for custom code.
+- Switch `EVQ-P2002W` is replaced to `TS-1145A-C-B` by personal ease of supply and demand of parts.
+- Number of tact switch replaced to `TS-1145A-C-B` is changed to **2** from 1. Extra SW2 is connected to GPIO1. The plan of GPIO1 is using for USER input button (Ex Self Programming Button)
+- Rplace `74LVC1T45` to `X2-DFN1410-6` package and associated part.
+- Castellated holes are removed for reducing the small scale unit production cost.
+- The addition of a 5x2 SMD pad, designed to accommodate a 1.27mm pin header for vertical connection on the left side, has been made. This pad is intended for connecting a custom Pogo Pin (https://gitlab.com/michael1308/pogoprobe) and currently follows the pinout of the TC-2030 for consideration in the pin mapping of the personal project.
+- Optionally added an I2C FRAM on the PCB bottom layer for data logging or frequent data storage purposes.
+- Changed the selection of resistors and capacitors to those available in the JLCPCB Basic Part list.
+- PCB width is increased to 49.9 mm from 40.0 mm
+- Added and modified parameters to enable direct production with JLCPCB.
+- Some libraries are referenced from [Lambda_KICAD_LIB](https://github.com/pmnxis/Lambda_KICAD_LIB)
