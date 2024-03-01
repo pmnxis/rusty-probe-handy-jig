@@ -17,6 +17,7 @@ _autosave-*
 # Folders
 gerbers
 rs-probe-backups
+rs-probe-rot90-4-backups
 
 # Added for modification
 production/rs-probe_*-*-*_*-*-*
@@ -28,3 +29,4 @@ production/rs-probe-handy-jig_*-*-*_*-*-*
 # Panelization related
 rs-probe-rot90-4.kicad_prl
 rs-probe-rot90-4.kicad_pro
+3dworks/**

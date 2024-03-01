@@ -3,7 +3,7 @@
 This is an open hardware probe for the Serial Wire Debug (SWD) and JTAG protocol.
 Based on the RP2040 MCU.
 
-![modified probe](modified_image/rs-probe-mod.png)
+![modified probe](modified_image/rs-probe-front.png)
 Following image is forked and modified PCB 3D rendering.
 This repo is modified PCB data details are descirbed in [here](#modification-on-this-forked-repo)
 
@@ -49,7 +49,7 @@ The original probe is available in the [probe-rs shop](https://shop.probe.rs/). 
 This work is licensed under [CERN-OHL-P](cern_ohl_p_v2.txt).
 
 # Modification on this forked repo
-![modified probe](modified_image/rs-probe-mod.png)
+![modified probe](modified_image/rs-probe-front.png)
 The existing rusty-probe has been modified for a practical experiment aiming to enable on-site, real-time firmware updates by individuals without programming knowledge. This modification incorporates BillMock-HW to facilitate firmware updates without the need for a computer.
 
 ## PCB Stack-Up
@@ -67,7 +67,8 @@ By opting for the 0.8mm thickness, the durability of the PCB might be compromise
 | Front   | Back    |
 | ------- | ------- |
 | ![backplane-front](modified_image/backplane-front.png) | ![backplane-back](modified_image/backplane-back.png) |
-
+| ![backplane-front-assembly-138mm](modified_image/rs-probe-assembly-top-138.png) | ![backplane-back-assembly-138mm](modified_image/rs-probe-assembly-bottom-138.png) |
+| ![backplane-front-assembly-08mm](modified_image/rs-probe-assembly-top-08.png) | ![backplane-back-assembly-08mm](modified_image/rs-probe-assembly-bottom-08.png) |
 ## Panelization 
 JLCPCB's Panelization requires a minimum size of 70mm x 70mm when placing PCBs along the Edge Rail. To meet this requirement, I rotated the PCB by 90 degrees and arranged them in a 4x1 configuration. Additionally, I inserted a dummy bar in the middle for successful Panelization.
 
@@ -90,3 +91,4 @@ cd ./panelize
 - PCB width is increased to 49.9 mm from 40.0 mm
 - Added and modified parameters to enable direct production with JLCPCB.
 - Some libraries are referenced from [Lambda_KICAD_LIB](https://github.com/pmnxis/Lambda_KICAD_LIB)
+kicad
