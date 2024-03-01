@@ -1,0 +1,64 @@
+{
+    "layout": {
+        "hspace": "2mm",
+        "vspace": "2mm",
+        "hbackbone": "5mm",
+        "vbackbone": "6mm",
+        "vboneskip": "1",
+        "rotation": "90deg",
+        "rows": "1",
+        "cols": "4",
+        "hbonecut": "False"
+    },
+    "tabs": {
+        "type": "annotation",
+        "patchcorners": "False"
+    },
+    "cuts": {
+        "type": "vcuts"
+    },
+    "framing": {
+        "type": "railstb",
+        "width": "8mm",
+        "fillet": "1mm"
+    },
+    "tooling": {
+        "type": "4hole",
+        "hoffset": "7mm",
+        "voffset": "2.5mm",
+        "size": "1.5mm"
+    },
+    "fiducials": {
+        "type": "4fid",
+        "hoffset": "12mm",
+        "voffset": "3.85mm",
+        "coppersize": "1mm",
+        "opening": "2mm"
+    },
+    "text": {
+        "type": "simple",
+        "voffset": "2.7mm",
+        "text": "Rusty-Probe-HandyJig"
+    },
+    "text2": {
+        "type": "simple",
+        "hoffset": "14mm",
+        "voffset": "-2.7mm",
+        "hjustify": "left",
+        "text": "JLCJLCJLCJLC",
+        "anchor": "bl"
+    },
+    "copperfill": {
+        "type": "solid",
+        "clearance": "2mm"
+    },
+    "page": {
+        "anchor": "tl",
+        "posx": "20mm"
+    },
+    "post": {
+        "millradius": "1mm",
+        "reconstructarcs": "False",
+        "dimensions": "True"
+    }
+}

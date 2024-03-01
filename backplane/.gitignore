@@ -1,0 +1,32 @@
+# Temporary files
+*.000
+*bak*
+*bck*
+*~
+_autosave-*
+*.tmp
+*cache*
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+
+# Folders
+gerbers
+backplane-backups
+
+# Added for modification
+\#auto_saved_files#
+*.lck
+.DS_Store
+
+
+production/**/**.csv
+production/**/**.ipc
+
+# backplane does not required pro and prl
+*.kicad_prl
+*.kicad_pro

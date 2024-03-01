@@ -3,7 +3,7 @@
 This is an open hardware probe for the Serial Wire Debug (SWD) and JTAG protocol.
 Based on the RP2040 MCU.
 
-![modified probe](rs-probe-mod.png)
+![modified probe](modified_image/rs-probe-mod.png)
 Following image is forked and modified PCB 3D rendering.
 This repo is modified PCB data details are descirbed in [here](#modification-on-this-forked-repo)
 
@@ -49,14 +49,40 @@ The original probe is available in the [probe-rs shop](https://shop.probe.rs/). 
 This work is licensed under [CERN-OHL-P](cern_ohl_p_v2.txt).
 
 # Modification on this forked repo
-![modified probe](rs-probe-mod.png)
+![modified probe](modified_image/rs-probe-mod.png)
 The existing rusty-probe has been modified for a practical experiment aiming to enable on-site, real-time firmware updates by individuals without programming knowledge. This modification incorporates BillMock-HW to facilitate firmware updates without the need for a computer.
+
+## PCB Stack-Up
+|          |                    |
+| -------- | ------------------ |
+| Layer    | 4 Layer            |
+| Material | FR4                |
+| Impedence Control | Don't care (But choosed `JLC04081H-3313` ) |
+| Thickness | **0.8 mm**        |
+
+In the modified board, a 1.27mm pin header is positioned at the left end to facilitate connection with a PogoProbe. The board is designed with a thickness of 0.8mm, considering the recommended thickness for the USB-C connector. While the original PCB uses 1.6mm thickness, using the USB-C connector directly (without PogoProbe) allows for the use of 1.6mm thickness as well.
+
+By opting for the 0.8mm thickness, the durability of the PCB might be compromised. To address this, a BackPlane board is employed to reinforce and augment the insufficient rigidity.
+
+| Front   | Back    |
+| ------- | ------- |
+| ![backplane-front](modified_image/backplane-front.png) | ![backplane-back](modified_image/backplane-back.png) |
+
+## Panelization 
+JLCPCB's Panelization requires a minimum size of 70mm x 70mm when placing PCBs along the Edge Rail. To meet this requirement, I rotated the PCB by 90 degrees and arranged them in a 4x1 configuration. Additionally, I inserted a dummy bar in the middle for successful Panelization.
+
+### Panlization by cli
+```sh
+# KiKit Required
+cd ./panelize
+./panelize_4batch.sh
+```
 
 ## Changed Note
 - Default `W25Q8` is replaced to `IS25WP016D` for custom code.
 - Switch `EVQ-P2002W` is replaced to `TS-1145A-C-B` by personal ease of supply and demand of parts.
 - Number of tact switch replaced to `TS-1145A-C-B` is changed to **2** from 1. Extra SW2 is connected to GPIO1. The plan of GPIO1 is using for USER input button (Ex Self Programming Button)
-- Rplace `74LVC1T45` to `X2-DFN1410-6` package and associated part.
+- Replace `74LVC1T45` to `X2-DFN1410-6` package and associated part.
 - Castellated holes are removed for reducing the small scale unit production cost.
 - The addition of a 5x2 SMD pad, designed to accommodate a 1.27mm pin header for vertical connection on the left side, has been made. This pad is intended for connecting a custom Pogo Pin (https://gitlab.com/michael1308/pogoprobe) and currently follows the pinout of the TC-2030 for consideration in the pin mapping of the personal project.
 - Optionally added an I2C FRAM on the PCB bottom layer for data logging or frequent data storage purposes.

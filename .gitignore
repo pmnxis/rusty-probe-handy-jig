@@ -24,3 +24,7 @@ production/rs-probe-handy-jig_*-*-*_*-*-*
 \#auto_saved_files#
 *.lck
 .DS_Store
+
+# Panelization related
+rs-probe-rot90-4.kicad_prl
+rs-probe-rot90-4.kicad_pro
